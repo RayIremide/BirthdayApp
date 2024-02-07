@@ -19,7 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views','birthday'));
-app.use('/index', router)
+app.use('/birthday',router.userRouter)
+
 
 
 // home route
@@ -27,9 +28,8 @@ app.get("/", (req, res) => {
   return res.status(200).json({ message: "success", status: true });
 });
 
-app.use('/birthday',router.userRouter)
-
 app.get('/sendemail', employeeEmail.getEmployeeEmail);
+
 
 
 
