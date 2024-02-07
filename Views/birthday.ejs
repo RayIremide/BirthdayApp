@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none; /* Remove default underline from the link */
+      display: inline-block; /* Make the link behave like a block-level element */
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #4CAF50; /* Green background color */
+      color: white; /* White text color */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Add a slight border radius for a rounded look */
+      cursor: pointer; /* Change cursor on hover */
+    }
+
+    /* Add hover effect */
+    button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+  </style>
+</head>
+<body>
+  <h1>Employee Birthday Registeration</h1>
+  <form action="/birthday/dob" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <a href="thankyou">
+      <button type="submit">Submit</button>
+      </a>
+  </form>
+</body>
+</html>
