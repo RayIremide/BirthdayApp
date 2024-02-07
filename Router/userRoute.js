@@ -5,9 +5,13 @@ const userRouter = express.Router();
 
 
 // Employee DOB Registration
+
 userRouter.get('/dob', (req, res) => {
     res.render('birthday'); 
   });
+
+
+
   
   userRouter.get('/thankyou', (req, res) => {
     res.render('thankyou'); 
