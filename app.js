@@ -17,7 +17,7 @@ mongoDB.connectToMongoDB()
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'Views'));
-app.use('/todo', router)
+app.use('/birthday', router)
 
 app.use(express.json()) 
 app.use(express.urlencoded({ extended: true })); 
