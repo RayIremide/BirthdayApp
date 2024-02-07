@@ -6,6 +6,7 @@ const User = require('./Database/UserModel')
 const router = require('./Router/userRoute')
 const cron = require('node-cron');
 const nodemailer = require("nodemailer");
+const path =require('path')
 
 const app = express();
 const PORT = process.env.PORT;
@@ -14,9 +15,9 @@ const PORT = process.env.PORT;
 mongoDB.connectToMongoDB()
 
 
-
-
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'Views'));
+app.use('/todo', router)
 
 app.use(express.json()) 
 app.use(express.urlencoded({ extended: true })); 
