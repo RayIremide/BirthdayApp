@@ -18,13 +18,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 app.set("Views", path.join(__dirname, "Views"));
+app.use("/employee", router.userRouter);
 
 // home route
 app.get("/", (req, res) => {
   return res.status(200).json({ message: "success", status: true });
 });
-
-app.use("/employee", router.userRouter);
 
 app.get("/sendemail", employeeEmail.getEmployeeEmail);
 
