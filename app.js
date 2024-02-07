@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'Views'));
-app.use('/index', router.userRouter)
+app.set('Views', path.join(__dirname, 'Views'));
+app.use('/index', router)
 
 
 // home route
