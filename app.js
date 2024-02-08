@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 app.get("/sendemail", employeeEmail.getEmployeeEmail);
 
 // Set up cron job to send email every minute
-cron.schedule("* 7 * * *", async () => {
+cron.schedule("0 7 * * *", async () => {
   try {
     console.log("Sending email to employees...");
     await employeeEmail.getEmployeeEmail();
